@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UGC portfolio — brand content created while traveling the world." />
+  <title>Brand Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="wordmark" id="wordmark">portfolio</span>
+      <span class="topbar-note">UGC portfolio · tap a brand to view the work</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="profile-header" id="profile-header"></section>
+
+    <nav class="highlights" id="highlights" aria-label="Brand highlights"></nav>
+
+    <div class="grid-tabs">
+      <span class="grid-tab active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+        Brands
+      </span>
+    </div>
+
+    <section class="grid" id="grid" aria-label="Brands I've worked with"></section>
+
+    <footer class="footer">
+      <span id="footer-text"></span><br />
+      A portfolio in the style of a social feed — not affiliated with Instagram.
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="assets/js/shared.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script>
+    document.getElementById("wordmark").textContent = SITE_CONFIG.profile.username;
+    document.getElementById("footer-text").textContent =
+      "© " + new Date().getFullYear() + " " + SITE_CONFIG.profile.name + " · All brand content shown was created by me under contract.";
+  </script>
+</body>
+</html>

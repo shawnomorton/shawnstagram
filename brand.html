@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="topbar-back" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        Back to all brands
+      </a>
+      <span class="wordmark" id="wordmark"></span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="profile-header" id="profile-header"></section>
+
+    <nav class="highlights" id="highlights" aria-label="Story highlights"></nav>
+
+    <div class="grid-tabs">
+      <span class="grid-tab active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+        Content
+      </span>
+    </div>
+
+    <section class="grid" id="grid" aria-label="Content created for this brand"></section>
+
+    <footer class="footer">
+      <span id="footer-text"></span>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="assets/js/shared.js"></script>
+  <script src="assets/js/brand.js"></script>
+  <script>
+    document.getElementById("wordmark").textContent = SITE_CONFIG.profile.username;
+    document.getElementById("footer-text").textContent =
+      "Content created by " + SITE_CONFIG.profile.name + " · " + SITE_CONFIG.profile.website;
+  </script>
+</body>
+</html>
